@@ -36,10 +36,14 @@ for(i in 1:nrow(epi.treated)){
       }
       else{
         
-        # This is not a good approximation for several features like Population, etc., need to figure out a better way to do replace NA.
+        # This is not a good approximation for several features like EPI, Population, etc., need to figure out a better way to do replace NA.
         epi.treated[i,j]<-epi.means[j] 
       }
     }
   }
 }
 
+# EPI stats before treatment
+summary(epi_data$EPI)
+# EPI stats after treatment
+summary(epi.treated$EPI)
