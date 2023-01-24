@@ -71,3 +71,5 @@ plot(ecdf(epi_data$EPI), do.points=FALSE, verticals = T)
 par(pty="s")
 
 qqnorm(epi_data$EPI)
+
+qqnorm(epi_data$DALY)
