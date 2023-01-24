@@ -67,3 +67,7 @@ lines(density(epi_data$EPI, na.rm = TRUE, bw = "SJ"))
 rug(epi_data$EPI, col = "RED")
 
 plot(ecdf(epi_data$EPI), do.points=FALSE, verticals = T)
+
+par(pty="s")
+
+qqnorm(epi_data$EPI)
