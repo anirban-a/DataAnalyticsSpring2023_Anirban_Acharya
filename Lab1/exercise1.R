@@ -47,3 +47,21 @@ for(i in 1:nrow(epi.treated)){
 summary(epi_data$EPI)
 # EPI stats after treatment
 summary(epi.treated$EPI)
+
+# Equivalent to EPI stats above but without the NAs.
+fivenum(epi_data$EPI, na.rm = TRUE)
+
+stem(epi_data$EPI)
+stem(epi_data$EPI, scale = 2.5)
+
+sort(unique(epi_data$EPI, na.rm=TRUE))
+
+hist(epi_data$EPI)
+hist(epi.treated$EPI)
+
+# Histogram for values in range [30, 95] with probability densities.
+hist(epi_data$EPI, seq(30., 95., 1.0), prob=TRUE)
+
+lines(density(epi_data$EPI, na.rm = TRUE, bw = "SJ"))
+
+rug(epi_data$EPI, col = "RED")
