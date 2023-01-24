@@ -65,3 +65,5 @@ hist(epi_data$EPI, seq(30., 95., 1.0), prob=TRUE)
 lines(density(epi_data$EPI, na.rm = TRUE, bw = "SJ"))
 
 rug(epi_data$EPI, col = "RED")
+
+plot(ecdf(epi_data$EPI), do.points=FALSE, verticals = T)
