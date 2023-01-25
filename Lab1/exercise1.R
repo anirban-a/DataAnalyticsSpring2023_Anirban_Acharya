@@ -73,3 +73,10 @@ par(pty="s")
 qqnorm(epi_data$EPI)
 
 qqnorm(epi_data$DALY)
+
+plot(ecdf(epi_data$WATER_H), do.points=FALSE, verticals = T, col="RED")
+
+# Comparing distributions using Box Plot:
+boxplot(epi_data$EPI, epi_data$DALY)
+
+qqplot(x=epi_data$EPI, y=epi_data$DALY)
