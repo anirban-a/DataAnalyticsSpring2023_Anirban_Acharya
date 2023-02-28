@@ -1,3 +1,7 @@
+*.zip
+ProjectData/*
+data/
+
 *.DS_Store
 .Rproj.user
 .Rhistory
